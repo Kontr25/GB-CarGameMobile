@@ -1,3 +1,5 @@
+using _Root.Scripts.Tool.Ads.UnityAds;
+using _Root.Scripts.Tool.Analytics;
 using Ui;
 using Game;
 using Profile;
@@ -11,12 +13,16 @@ internal class MainController : BaseController
     private MainMenuController _mainMenuController;
     private GameController _gameController;
     private SettingsWindowController _settingsWindowController;
+    private AnalyticsManager _analyticsManager;
+    private UnityAdsService _adsService;
 
 
-    public MainController(Transform placeForUi, ProfilePlayer profilePlayer)
+    public MainController(Transform placeForUi, ProfilePlayer profilePlayer, AnalyticsManager analyticsManager, UnityAdsService adsService)
     {
         _placeForUi = placeForUi;
         _profilePlayer = profilePlayer;
+        _analyticsManager = analyticsManager;
+        _adsService = adsService;
 
         profilePlayer.CurrentState.SubscribeOnChange(OnChangeGameState);
         OnChangeGameState(_profilePlayer.CurrentState.Value);
@@ -37,7 +43,7 @@ internal class MainController : BaseController
         switch (state)
         {
             case GameState.Start:
-                _mainMenuController = new MainMenuController(_placeForUi, _profilePlayer);
+                _mainMenuController = new MainMenuController(_placeForUi, _profilePlayer, _adsService);
                 _settingsWindowController?.Dispose();
                 _gameController?.Dispose();
                 break;
@@ -45,6 +51,7 @@ internal class MainController : BaseController
                 _gameController = new GameController(_profilePlayer);
                 _settingsWindowController?.Dispose();
                 _mainMenuController?.Dispose();
+                _analyticsManager.SendGameStartedEvent();
                 break;
             case GameState.Settings:
                 _settingsWindowController = new SettingsWindowController(_placeForUi, _profilePlayer);

@@ -1,3 +1,4 @@
+using _Root.Scripts.Tool.Ads.UnityAds;
 using Profile;
 using Tool;
 using UnityEngine;
@@ -10,13 +11,15 @@ namespace Ui
         private readonly ResourcePath _resourcePath = new ResourcePath("Prefabs/MainMenu");
         private readonly ProfilePlayer _profilePlayer;
         private readonly MainMenuView _view;
+        private readonly UnityAdsService _adsService;
 
 
-        public MainMenuController(Transform placeForUi, ProfilePlayer profilePlayer)
+        public MainMenuController(Transform placeForUi, ProfilePlayer profilePlayer, UnityAdsService adsService)
         {
             _profilePlayer = profilePlayer;
             _view = LoadView(placeForUi);
-            _view.Init(StartGame, OpenSettings);
+            _adsService = adsService;
+            _view.Init(StartGame, OpenSettings, ShowRewarderAds);
         }
 
 
@@ -34,5 +37,13 @@ namespace Ui
         
         private void OpenSettings() =>
             _profilePlayer.CurrentState.Value = GameState.Settings;
+
+        private void ShowRewarderAds()
+        { 
+            if (_adsService.isInitialized) OnAdsInitialized();
+            else _adsService.Initialized.AddListener(OnAdsInitialized);
+        }
+        
+        private void OnAdsInitialized() => _adsService.RewardedPlayer.Play();
     }
 }
