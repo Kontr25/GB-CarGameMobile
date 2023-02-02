@@ -12,13 +12,15 @@ namespace Ui
         [SerializeField] private Button _buttonRewardedAds;
         [SerializeField] private Sprite _backgroundSprite;
         [SerializeField] private Image _backGround;
+        [SerializeField] private Button _buttonShed;
 
 
-        public void Init(UnityAction startGame, UnityAction openSettings, UnityAction showRewardedAds)
+        public void Init(UnityAction startGame, UnityAction openSettings, UnityAction showRewardedAds, UnityAction openShed)
         {
             _buttonStart.onClick.AddListener(startGame);
             _buttonSettings.onClick.AddListener(openSettings);
             _buttonRewardedAds.onClick.AddListener(showRewardedAds);
+            _buttonShed.onClick.AddListener(openShed);
         }
 
 
@@ -27,6 +29,7 @@ namespace Ui
             _buttonStart.onClick.RemoveAllListeners();
             _buttonSettings.onClick.RemoveAllListeners();
             _buttonRewardedAds.onClick.RemoveAllListeners();
+            _buttonShed.onClick.RemoveAllListeners();
         }
 
         public void ChangeBG()

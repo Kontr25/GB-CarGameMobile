@@ -19,7 +19,7 @@ namespace Ui
             _profilePlayer = profilePlayer;
             _view = LoadView(placeForUi);
             _adsService = adsService;
-            _view.Init(StartGame, OpenSettings, ShowRewarderAds);
+            _view.Init(StartGame, OpenSettings, ShowRewarderAds, OpenShed);
         }
 
 
@@ -43,6 +43,9 @@ namespace Ui
             if (_adsService.isInitialized) OnAdsInitialized();
             else _adsService.Initialized.AddListener(OnAdsInitialized);
         }
+        
+        private void OpenShed() =>
+            _profilePlayer.CurrentState.Value = GameState.Shed;
         
         private void OnAdsInitialized() => _adsService.RewardedPlayer.Play();
     }
