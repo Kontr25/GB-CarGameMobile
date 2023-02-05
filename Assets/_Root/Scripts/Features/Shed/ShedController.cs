@@ -16,7 +16,6 @@ namespace Features.Shed
     internal class ShedController : BaseController, IShedController
     {
         private readonly ResourcePath _viewPath = new ResourcePath("Prefabs/Shed/ShedView");
-        private readonly ResourcePath _dataSourcePath = new ResourcePath("Configs/Shed/UpgradeItemConfigDataSource");
 
         private readonly ShedView _view;
         private readonly ProfilePlayer _profilePlayer;
@@ -26,7 +25,9 @@ namespace Features.Shed
 
         public ShedController(
             [NotNull] Transform placeForUi,
-            [NotNull] ProfilePlayer profilePlayer)
+            [NotNull] ProfilePlayer profilePlayer,
+            [NotNull] UpgradeHandlersRepository upgradeHandlersRepository,
+            [NotNull] InventoryController inventoryController)
         {
             if (placeForUi == null)
                 throw new ArgumentNullException(nameof(placeForUi));
@@ -34,29 +35,11 @@ namespace Features.Shed
             _profilePlayer
                 = profilePlayer ?? throw new ArgumentNullException(nameof(profilePlayer));
 
-            _upgradeHandlersRepository = CreateRepository();
-            _inventoryController = CreateInventoryController(placeForUi);
+            _upgradeHandlersRepository = upgradeHandlersRepository;
+            _inventoryController = inventoryController;
             _view = LoadView(placeForUi);
 
             _view.Init(Apply, Back);
-        }
-
-
-        private UpgradeHandlersRepository CreateRepository()
-        {
-            UpgradeItemConfig[] upgradeConfigs = ContentDataSourceLoader.LoadUpgradeItemConfigs(_dataSourcePath);
-            var repository = new UpgradeHandlersRepository(upgradeConfigs);
-            AddRepository(repository);
-
-            return repository;
-        }
-
-        private InventoryController CreateInventoryController(Transform placeForUi)
-        {
-            var inventoryController = new InventoryController(placeForUi, _profilePlayer.Inventory);
-            AddController(inventoryController);
-
-            return inventoryController;
         }
 
         private ShedView LoadView(Transform placeForUi)

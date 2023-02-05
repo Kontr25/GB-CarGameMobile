@@ -1,18 +1,10 @@
-using JoostenProductions;
 using UnityEngine;
 
 namespace Game.InputLogic
 {
     internal class InputArrow : BaseInputView
     {
-        private void Start() =>
-            UpdateManager.SubscribeToUpdate(Move);
-
-        private void OnDestroy() =>
-            UpdateManager.UnsubscribeFromUpdate(Move);
-
-
-        private void Move()
+        protected override void Move()
         {
             Vector3 direction = CalcDirection();
             float moveValue = Speed * Time.deltaTime * direction.x;

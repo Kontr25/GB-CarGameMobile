@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using _Root.Scripts;
 using Features.Shed.Upgrade;
 using Features.Inventory.Items;
 using Features.AbilitySystem.Abilities;
@@ -24,6 +25,12 @@ namespace Tool
         {
             var dataSource = ResourcesLoader.LoadObject<AbilityItemConfigDataSource>(resourcePath);
             return dataSource == null ? Array.Empty<AbilityItemConfig>() : dataSource.AbilityConfigs.ToArray();
+        }
+        
+        public static EntryPointConfiguration LoadEntryPointConfigs(ResourcePath resourcePath)
+        {
+            var entryPointCongigs = ResourcesLoader.LoadObject<EntryPointConfiguration>(resourcePath);
+            return entryPointCongigs;
         }
     }
 }

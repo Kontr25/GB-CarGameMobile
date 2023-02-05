@@ -1,15 +1,14 @@
+using _Root.Scripts;
 using _Root.Scripts.Tool.Ads.UnityAds;
 using _Root.Scripts.Tool.Analytics;
 using Profile;
+using Tool;
 using UnityEngine;
 
 internal class EntryPoint : MonoBehaviour
 {
-    [SerializeField] private const float _speedCar = 15f;
-    [SerializeField] private const float _jumpHeight = 5f;
-    [SerializeField] private const float _visibilityRange = 20f;
-    [SerializeField] private const float _endurance = 10;
-    private const GameState InitialState = GameState.Start;
+    private readonly ResourcePath _entryPointConfigPath =
+        new ResourcePath("Configs/EntryPoint/EntryPointConfiguration");
 
     [SerializeField] private Transform _placeForUi;
     [SerializeField] private AnalyticsManager _analyticsManager;
@@ -20,7 +19,10 @@ internal class EntryPoint : MonoBehaviour
 
     private void Start()
     {
-        var profilePlayer = new ProfilePlayer(_speedCar, InitialState,_jumpHeight, _visibilityRange, _endurance);
+        EntryPointConfiguration _configuration = ContentDataSourceLoader.LoadEntryPointConfigs(_entryPointConfigPath);
+        var profilePlayer = new ProfilePlayer(_configuration.SpeedCar, _configuration.InitialState,_configuration.JumpHeight, 
+            _configuration.VisibilityRange, _configuration.Endurance);
+        
         _mainController = new MainController(_placeForUi, profilePlayer, _analyticsManager, _adsService);
 
         if (_adsService.isInitialized) OnAdsInitialized();
