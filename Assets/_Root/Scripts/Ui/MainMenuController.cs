@@ -19,7 +19,7 @@ namespace Ui
             _profilePlayer = profilePlayer;
             _view = LoadView(placeForUi);
             _adsService = adsService;
-            _view.Init(StartGame, OpenSettings, ShowRewarderAds, OpenShed);
+            _view.Init(StartGame, OpenSettings, ShowRewarderAds, OpenShed, OpenReward, ExitGame);
         }
 
 
@@ -48,5 +48,16 @@ namespace Ui
             _profilePlayer.CurrentState.Value = GameState.Shed;
         
         private void OnAdsInitialized() => _adsService.RewardedPlayer.Play();
+        
+        private void OpenReward() =>
+            _profilePlayer.CurrentState.Value = GameState.Reward;
+
+        private void ExitGame()
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#endif
+            Application.Quit();
+        }
     }
 }

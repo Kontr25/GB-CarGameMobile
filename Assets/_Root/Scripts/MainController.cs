@@ -1,11 +1,14 @@
 using _Root.Scripts.Tool.Ads.UnityAds;
 using _Root.Scripts.Tool.Analytics;
+using _Root.Scripts.Ui;
+using _Root.Scripts.Units;
 using Features.Inventory;
 using Features.Shed;
 using Features.Shed.Upgrade;
 using Ui;
 using Game;
 using Profile;
+using Rewards;
 using Tool;
 using UnityEngine;
 
@@ -25,6 +28,10 @@ internal class MainController : BaseController
     private AnalyticsManager _analyticsManager;
     private UnityAdsService _adsService;
     private InventoryController _inventoryController;
+    private RewardController _rewardController;
+    private StartFightController _startFightController;
+    private FightController _fightController;
+    private GoHomeController _goHomeController;
 
 
     public MainController(Transform placeForUi, ProfilePlayer profilePlayer, AnalyticsManager analyticsManager, UnityAdsService adsService)
@@ -56,6 +63,8 @@ internal class MainController : BaseController
                 break;
             case GameState.Game:
                 _gameController = new GameController(_placeForUi, _profilePlayer);
+                _startFightController = new StartFightController(_placeForUi, _profilePlayer);
+                _goHomeController = new GoHomeController(_placeForUi, _profilePlayer);
                 _analyticsManager.SendGameStartedEvent();
                 break;
             case GameState.Settings:
@@ -63,6 +72,12 @@ internal class MainController : BaseController
                 break;
             case GameState.Shed:
                 _shedController = new ShedController(_placeForUi, _profilePlayer, CreateRepository(), CreateInventoryController(_placeForUi));
+                break;
+            case GameState.Reward:
+                _rewardController = new RewardController(_placeForUi, _profilePlayer);
+                break;
+            case GameState.Fight:
+                _fightController = new FightController(_placeForUi, _profilePlayer);
                 break;
         }
     }
@@ -75,6 +90,10 @@ internal class MainController : BaseController
         _settingsMenuController?.Dispose();
         _shedController?.Dispose();
         _inventoryController?.Dispose();
+        _rewardController?.Dispose();
+        _startFightController?.Dispose();
+        _fightController?.Dispose();
+        _goHomeController?.Dispose();
     }
     
     private UpgradeHandlersRepository CreateRepository()

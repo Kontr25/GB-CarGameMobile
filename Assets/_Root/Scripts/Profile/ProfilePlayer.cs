@@ -1,4 +1,5 @@
 using Features.Inventory;
+using Features.Rewards.Currency;
 using Game.Car;
 using Tool;
 
@@ -9,6 +10,7 @@ namespace Profile
         public readonly SubscriptionProperty<GameState> CurrentState;
         public readonly CarModel CurrentCar;
         public readonly InventoryModel Inventory;
+        public readonly CurrencyModel Currency;
 
 
         public ProfilePlayer(float speedCar, GameState initialState, float jumpHeight, 
@@ -22,6 +24,7 @@ namespace Profile
             CurrentState = new SubscriptionProperty<GameState>();
             CurrentCar = new CarModel(speedCar, jumpHeight, visibilityRange, endurance);
             Inventory = new InventoryModel();
+            Currency = new CurrencyModel();
         }
     }
 }
