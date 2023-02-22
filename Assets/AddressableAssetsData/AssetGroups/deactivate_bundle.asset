@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: deactivate_bundle
+  m_EditorClassIdentifier: 
+  m_GroupName: deactivate_bundle
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 2e54302e40319b740a4c09ea92a1cd4f
+  m_SerializeEntries:
+  - m_GUID: 80820b4b499a044469befdb080dfb6b0
+    m_Address: Assets/_Root/Sprites/deactivate.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 43b128c42e847be4db2667f236820a91, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: c2b7867beb030064e9e2b065b82f8f35, type: 2}
+    - {fileID: 11400000, guid: fc8a3f6e0ccdfe249a197f58633cf7e2, type: 2}
