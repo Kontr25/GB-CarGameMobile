@@ -3,20 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c4809903-97bf-47e1-a984-d005505afaba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GB-CarGameMobile/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GB-CarGameMobile/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Tool/Tweens/CustomButton_Obsolete.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Tool/Tweens/CustomButton_Obsolete.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Tool/Tweens/Editor/CustomButtonEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Tool/Tweens/Editor/CustomButtonEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Sprites/1638665108-1049.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Sprites/1638665108-1049.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Sprites/UI_Graphic_Resource_Coins.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Sprites/UI_Graphic_Resource_Coins.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Sprites/UI_Graphic_Resource_Food.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Sprites/UI_Graphic_Resource_Food.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Sprites/UI_Graphic_Resource_Gems.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Sprites/UI_Graphic_Resource_Gems.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Fonts/LapsusPro-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Fonts/LapsusPro-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/mainMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/mainMenu.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Search.settings" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Search.settings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +22,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.purchasing@4.4.1/Runtime/Stores/FakeStore/UIFakeStore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.purchasing@4.4.1/Runtime/Purchasing/ProductType.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Lesson_9_End/Assets/_Root/Scripts/Tool/Bundles/Examples/LoadWindowView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Lesson_9_End/Assets/_Root/Scripts/Tool/Bundles/Examples/LoadWindowView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/ResourceManager/AsyncOperations/AsyncOperationHandle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ads@4.3.0/Runtime/Advertisement/Advertisement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ads@4.3.0/Runtime/Advertisement/Platform/Platform.cs" root0="SKIP_HIGHLIGHTING" />
@@ -85,7 +81,8 @@
       <workItem from="1675369786481" duration="7374000" />
       <workItem from="1675620146219" duration="5587000" />
       <workItem from="1676836136616" duration="8618000" />
-      <workItem from="1677102129982" duration="5248000" />
+      <workItem from="1677102129982" duration="5541000" />
+      <workItem from="1677618233788" duration="1847000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Car Game Localization_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: f6e744670608b994f826cc951648a161, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 261181169664
+    m_Localized: START
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316755697664
+    m_Localized: REWARDS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 519357358080
+    m_Localized: SETTINGS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 623178964992
+    m_Localized: SHED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 688740130816
+    m_Localized: EXIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 828162990080
+    m_Localized: SHOW ADS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1154911854592
+    m_Localized: BUY NEW ENGINE
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

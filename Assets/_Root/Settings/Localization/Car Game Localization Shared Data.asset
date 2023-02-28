@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Car Game Localization Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Car Game Localization
+  m_TableCollectionNameGuidString: f6e744670608b994f826cc951648a161
+  m_Entries:
+  - m_Id: 261181169664
+    m_Key: Start_text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316755697664
+    m_Key: Rewards_text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 519357358080
+    m_Key: Settings_text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 623178964992
+    m_Key: Shed_text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 688740130816
+    m_Key: Exit_text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 828162990080
+    m_Key: ShowAds_text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1154911854592
+    m_Key: BuyNewEngine_text
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 852311282039390232
+  references:
+    version: 2
+    RefIds:
+    - rid: 852311282039390232
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1677620199405

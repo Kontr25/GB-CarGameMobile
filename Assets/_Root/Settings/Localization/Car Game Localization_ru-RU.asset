@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Car Game Localization_ru-RU
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: ru-RU
+  m_SharedData: {fileID: 11400000, guid: f6e744670608b994f826cc951648a161, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 261181169664
+    m_Localized: "\u0421\u0422\u0410\u0420\u0422"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316755697664
+    m_Localized: "\u041D\u0410\u0413\u0420\u0410\u0414\u042B"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 519357358080
+    m_Localized: "\u041D\u0410\u0421\u0422\u0420\u041E\u0419\u041A\u0418"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 623178964992
+    m_Localized: "\u0413\u0410\u0420\u0410\u0416"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 688740130816
+    m_Localized: "\u0412\u042B\u0425\u041E\u0414"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 828162990080
+    m_Localized: "\u041F\u041E\u041A\u0410\u0417\u0410\u0422\u042C \u0420\u0415\u041A\u041B\u0410\u041C\u0423"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1154911854592
+    m_Localized: "\u041A\u0423\u041F\u0418\u0422\u042C \u041D\u041E\u0412\u042B\u0419
+      \u0414\u0412\u0418\u0413\u0410\u0422\u0415\u041B\u042C"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
